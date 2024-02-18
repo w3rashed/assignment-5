@@ -74,7 +74,7 @@
                 <h1 class="text-white font-extrabold text-6xl ">End-to-End Travel with <span class="text-[#1DD100] ">P Paribahan</span></h1>
                 <p class="my-5 text-white text-[18px] font-normal ">Yes, you can run unit tests and view the results directly within the app. The
                 integrated testing features allow for a streamlined .</p>
-                <button class="btn border-none  bg-[#1DD100] text-black   px-8 text-xl font-bold">Buy Ticket</button>
+                <button id="buy-ticket" class="btn border-none  bg-[#1DD100] text-black   px-8 text-xl font-bold">Buy Ticket</button>
             </div>
         </section>
         <!-- offer secton  -->
@@ -125,14 +125,14 @@
         </section>
 
         <!-- bus sit price and destination  -->
-        <section class=" border-t-2 bg-slate-50 border-t-green-500 rounded-[88px] mt-32 pb-32">
+        <section id="bus-info" class=" border-t-2 bg-slate-50 border-t-green-500 rounded-[88px] mt-32 pb-32">
             <div class="container mx-auto">
                 <div class=" flex flex-col justify-center text-center mt-32 ">
                     <h2 class="text-[#030712] font-[raleway] font-bold text-[40px]">P.H Paribahan</h2>
                     <p class="font-[inter] text-lg mt-6 text-[#03071299] ">Yes, you can run unit tests and view the results directly within the app. The<br>integrated testing features allow for a streamlined .</p>
                 </div>
                 <!-- bus info -->
-                <div class="  text-primary-content  ">
+                <div  class="  text-primary-content  ">
                     <div class="flex flex-col lg:flex-row items-center  rounded-3xl bg-white mt-12  lg:p-[52px] p-5">
                         
                         <div class="flex-1">
@@ -212,91 +212,70 @@
                         </div>
     
                         <!-- seat start -->
-                        <div class="font-medium text-2xl text-black opacity-50 ">
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full">
-                                    <span class="flex items-center">A</span>
-                                        <kbd class="kbd py-4 px-11">A1</kbd>
-                                  <kbd class="kbd py-4 px-11 lg:mr-20">A2</kbd>
-                                        <kbd class="kbd py-4 px-11">A3</kbd>
-                                        <kbd class="kbd py-4 px-11">A4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                    <span class="flex items-center">B</span>
-                                        <kbd class="kbd py-4 px-11">B1</kbd>
-                                  <kbd class="kbd py-4 px-11 lg:mr-20">B2</kbd>
-                                        <kbd class="kbd py-4 px-11">B3</kbd>
-                                        <kbd class="kbd py-4 px-11">B4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                   <span class="flex items-center">C</span>
-                                      <kbd class="kbd py-4 px-11">C1</kbd>
-                                <kbd class="kbd py-4 px-11 lg:mr-20">C2</kbd>
-                                      <kbd class="kbd py-4 px-11">C3</kbd>
-                                      <kbd class="kbd py-4 px-11">C4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                  <span class="flex items-center">D</span>
-                                      <kbd class="kbd py-4 px-11">D1</kbd>
-                                <kbd class="kbd py-4 px-11 lg:mr-20">D2</kbd>
-                                      <kbd class="kbd py-4 px-11">D3</kbd>
-                                      <kbd class="kbd py-4 px-11">D4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                  <span class="flex items-center">E</span>
-                                      <kbd class="kbd py-4 px-11">E1</kbd>
-                                <kbd class="kbd py-4 px-11 lg:mr-20">E2</kbd>
-                                      <kbd class="kbd py-4 px-11">E3</kbd>
-                                      <kbd class="kbd py-4 px-11">E4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                    <span class="flex items-center">F</span>
-                                        <kbd class="kbd py-4 px-11">F1</kbd>
-                                  <kbd class="kbd py-4 px-11 lg:mr-20">F2</kbd>
-                                        <kbd class="kbd py-4 px-11">F3</kbd>
-                                        <kbd class="kbd py-4 px-11">F4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                    <span class="flex items-center">G</span>
-                                        <kbd class="kbd py-4 px-11">G1</kbd>
-                                  <kbd class="kbd py-4 px-11 lg:mr-20">G2</kbd>
-                                        <kbd class="kbd py-4 px-11">G3</kbd>
-                                        <kbd class="kbd py-4 px-11">G4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                    <span class="flex items-center">H</span>
-                                        <kbd class="kbd py-4 px-11">H1</kbd>
-                                  <kbd class="kbd py-4 px-11 lg:mr-20">H2</kbd>
-                                        <kbd class="kbd py-4 px-11">H3</kbd>
-                                        <kbd class="kbd py-4 px-11">H4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                    <span class="flex items-center">I</span>
-                                        <kbd class="kbd py-4 px-11">I1</kbd>
-                                  <kbd class="kbd py-4 px-11 lg:mr-20">I2</kbd>
-                                        <kbd class="kbd py-4 px-11">I3</kbd>
-                                        <kbd class="kbd py-4 px-11">I4</kbd>
-                                
-                            </div> 
-                            <div class="flex justify-center lg:gap-10 gap-2 my-1 w-full mt-7">
-                                    <span class="flex items-center">J</span>
-                                        <kbd class="kbd py-4 px-11">J1</kbd>
-                                  <kbd class="kbd py-4 px-11 lg:mr-20">J2</kbd>
-                                        <kbd class="kbd py-4 px-11">J3</kbd>
-                                        <kbd class="kbd py-4 px-11">J4</kbd>
-                                
-                            </div> 
-                            
-                            
-                            
-                        </div> 
+                        <div class="flex gap-4 lg:gap-12">
+                            <div class="grid">
+                                <span class="  flex items-center">A</span>
+                                <span class="  flex items-center">B</span>
+                                <span class="  flex items-center">C</span>
+                                <span class="  flex items-center">D</span>
+                                <span class="  flex items-center">E</span>
+                                <span class="  flex items-center">F</span>
+                                <span class="  flex items-center">G</span>
+                                <span class="  flex items-center">H</span>
+                                <span class="  flex items-center">I</span>
+                                <span class="  flex items-center">J</span>
+                                    
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">A1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">B1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">C1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">D1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">E1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">F1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">G1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">H1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">I1</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">J1</kbd>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">A2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">B2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">C2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">D2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">E2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">F2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">G2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">H2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">I2</kbd>
+                                <kbd class=" seat kbd py-4 px-6 lg:px-11">J2</kbd>
+                            </div>
+                            <div class="flex flex-col gap-4 lg:ml-20">
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">A3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">B3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">C3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">D3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">E3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">F3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">G3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">H3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">I3</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">J3</kbd>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">A4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">B4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">C4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">D4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">E4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">F4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">G4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">H4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">I4</kbd>
+                                <kbd class="seat kbd py-4 px-6 lg:px-11">J4</kbd>
+                            </div>
+                        </div>
+                         
                         <!-- sit end -->
                          
                         
@@ -365,6 +344,8 @@
             
             
         </section>
+    </main>    
+
         <footer class="font-[inter]  lg:p-36 p-10 bg-[#030712]  text-white">
             <div class="container mx-auto">
                 <div class="flex flex-col lg:flex-row gap-5 lg:-gap-5 justify-between">
@@ -399,5 +380,7 @@
         
     <!-- custom js file link add here -->
     <script src="js/index.js"></script>
+    <script src="js/utility.js"></script>
+
 </body>
 </html>

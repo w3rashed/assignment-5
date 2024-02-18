@@ -69,12 +69,12 @@
     <!-- main section  -->
     <main class=" font-[inter]">
         <!-- banner section start here -->
-        <section class="container mx-auto rounded-[32px] bg-[url(images/banner.png)] bg-no-repeat bg-cover  h-[70vh] flex justify-center items-center  ">
+        <section class="container mx-auto rounded-[32px] bg-[url(images/banner.png)] bg-no-repeat bg-cover  h-[80vh] flex justify-center items-center  ">
             <div class="text-center w-[730px]">
                 <h1 class="text-white font-extrabold text-6xl ">End-to-End Travel with <span class="text-[#1DD100] ">P Paribahan</span></h1>
                 <p class="my-5 text-white text-[18px] font-normal ">Yes, you can run unit tests and view the results directly within the app. The
                 integrated testing features allow for a streamlined .</p>
-                <button id="buy-ticket" class="btn border-none  bg-[#1DD100] text-black   px-8 text-xl font-bold">Buy Ticket</button>
+                <a href="index.html#bus-info"><button id="buy-ticket" class="btn border-none  bg-[#1DD100] text-black   px-8 text-xl font-bold">Buy Ticket</button></a>
             </div>
         </section>
         <!-- offer secton  -->
@@ -126,6 +126,7 @@
 
         <!-- bus sit price and destination  -->
         <section id="bus-info" class=" border-t-2 bg-slate-50 border-t-green-500 rounded-[88px] mt-32 pb-32">
+            
             <div class="container mx-auto">
                 <div class=" flex flex-col justify-center text-center mt-32 ">
                     <h2 class="text-[#030712] font-[raleway] font-bold text-[40px]">P.H Paribahan</h2>
@@ -153,7 +154,7 @@
                                     <button class="btn btn-lg w-48 p-4 bg-green-500 bg-opacity-15">
                                         <div class="flex gap-2">
                                             <img class="w-7" src="images/seat-green.png" alt="">
-                                            <span class="text-lg font-medium text-green-500">40 Seats left</span>
+                                            <span class="text-lg font-medium text-green-500"><span id="total-seat">40</span> Seats left</span>
                                         </div>
                                     </button>
                                 </div>
@@ -206,7 +207,7 @@
                                 <h2 class="text-black flex gap-2"><img src="images/seat-green-filled.png" alt=""> Selected</h2>
                             </div>
                             <div class="border-y-[2px] border-dashed my-6" ></div>
-                            <div class="card-actions justify-end mb-6">
+                            <div class="card-actions  justify-end mb-6">
                                 <button class="btn btn-lg bg-black bg-opacity-10  px-12 flex "><img class="w-8" src="images/Untitled-2.png" alt=""></button>
                             </div>
                         </div>
@@ -293,25 +294,25 @@
                         <div class="bg-slate-50 p-8 rounded-xl">
                             <div class="">
                                 <div class="font-medium text-base flex justify-between">
-                                    <h3 class="text-black ">Seat</h3>
+                                    <h3 class="text-black ">Seat <span id="seat-count" class="text-sm bg-green-400 text-white px-2 rounded-full">0</span></h3>
                                     <h3 class="text-black ">Class</h3>
                                     <h3 class="text-black ">Price</h3>
                                 </div>
                                 <div class="border-y-[2px] border-dashed my-4" ></div>
                             </div>
                             <!-- selected seat -->
-                            <div>
-
+                            <div id="selected-seats" >
+                                
                             </div>
 
                             <div class="border-y-[1px]  my-4" ></div>
                             <div class="flex justify-between font-medium text-base">
-                               <h4>Total Price</h4> 
-                               <h4>BDT 1100</h4> 
+                               <h4 >Total Price</h4> 
+                               <h4>BDT <span id="total-price">0</span></h4> 
                             </div>
-                            <div class="input input-bordere-none rounded-xl w-full h-16 flex justify-between items-center mt-4 mb-6">
-                                <input  type="text" placeholder="Have any copupon? " class="w-24" />
-                                <button class="btn rounded-xl  h-12 lg:w-28  bg-green-500 text-base font-semibold text-white -mr-2">Apply</button>
+                            <div class=" input input-bordere-none rounded-xl w-full h-16 flex justify-between items-center mt-4 mb-6">
+                                <input  type="text" placeholder="Have any copupon? " class="  w-24" />
+                                <button class=" btn rounded-xl  h-12 lg:w-28  bg-green-500 text-base font-semibold text-white -mr-2">Apply</button>
                             </div>
                             <div class="flex justify-between font-medium text-base">
                                <h4>Grand Total</h4> 

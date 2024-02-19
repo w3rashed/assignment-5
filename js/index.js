@@ -89,12 +89,19 @@ for (let index = 0; index < seatArray.length; index++) {
                discountPrice.innerText = totalAmount * .15;
                grandTotal.innerText = totalAmount - parseInt(discountPrice.innerText)
                 console.log(discountBtn)
+                const discountContainer = document.getElementById('discount-container')
+               discountContainer.classList.add('hidden');
                discountSection.classList.remove('hidden');
             }
             else if(discountInput ==='Couple 20'){
                discountPrice.innerText = totalAmount * .20;
                grandTotal.innerText = totalAmount - parseInt(discountPrice.innerText)
+                console.log(discountBtn)
+                const discountContainer = document.getElementById('discount-container')
+               discountContainer.classList.add('hidden');
+               discountSection.classList.remove('hidden');
             }
+            
             // else(resurvArray.length)
         
         })

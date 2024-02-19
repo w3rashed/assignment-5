@@ -34,6 +34,7 @@ for (let index = 0; index < seatArray.length; index++) {
                 // console.log('gggggggggggg')
                 seat.setAttribute("disabled", "");
                 seat.classList.add('disabled:bg-green-500')
+                seat.classList.add('disabled:text-white')
             }
 
             // append child selected seat

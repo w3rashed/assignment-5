@@ -1,7 +1,10 @@
+
+
 const bokingSeat = 0;
 // const ticketPrice = 550;
 let titleCount = 1;
 let totalTicketPrice = 550;
+let totalAmount = 0;
 const discountPrice = 0;
 const grandTotalAmount = 0;
 
@@ -13,6 +16,9 @@ const resurvArray = [];
 for (let index = 0; index < seatArray.length; index++) {
     const seat = seatArray[index];
     // console.log(element)
+     
+
+
     seat.addEventListener('click',stopclick = function(event){
         resurvArray.push(event.target);
         // console.log(resurvArray);
@@ -31,7 +37,7 @@ for (let index = 0; index < seatArray.length; index++) {
             }
 
             // append child selected seat
-            const seatNumber = seat.innerText;
+        const seatNumber = seat.innerText;
         const selectedSeats = document.getElementById('selected-seats');
 
         // selected seat add a new div
@@ -61,32 +67,44 @@ for (let index = 0; index < seatArray.length; index++) {
         
         // total price calculate
         const totalPrice = document.getElementById('total-price');
-        const totalAmount = parseFloat(seatCount.innerText) * 550;
+        
+        totalAmount +=totalTicketPrice;
         totalPrice.innerText = totalAmount;
-        // discount amount calculate
-        const discountPrice = document.getElementById('discount-price');
-        // discountPrice.innerText = 500;
 
-        // grant total amount add
+
+        const discountPrice = document.getElementById('discount-price');
         const grandTotal = document.getElementById('grant-total');
-        grandTotal.innerText = totalAmount - parseFloat(discountPrice.innerText);
+        grandTotal.innerText = totalAmount;
+        
+       
         // discount value access and calculate
-        document.getElementById('discount-btn').addEventListener('click',function(){
+        const discountBtn = document.getElementById('discount-btn');
+        discountBtn.disabled = false;
+
+        discountBtn.addEventListener('click',function(){
             const discountInput = document.getElementById('discount-input').value;
             const discountSection = document.getElementById('discount-section')
             if(discountInput ==='NEW15'){
                discountPrice.innerText = totalAmount * .15;
+               grandTotal.innerText = totalAmount - parseInt(discountPrice.innerText)
+                console.log(discountBtn)
                discountSection.classList.remove('hidden');
             }
             else if(discountInput ==='Couple 20'){
                discountPrice.innerText = totalAmount * .20;
+               grandTotal.innerText = totalAmount - parseInt(discountPrice.innerText)
             }
             // else(resurvArray.length)
         
         })
-
+     
+              
+        }
         
-        const nextBtn = document.getElementById('next-btn');
+    })
+     
+}
+const nextBtn = document.getElementById('next-btn');
         nextBtn.addEventListener('click',function(){
             if(resurvArray.length === 0){
                 alert('Please selecet minimum one seat')
@@ -97,15 +115,9 @@ for (let index = 0; index < seatArray.length; index++) {
             }
         })
 
-        if(resurvArray.length > 0){
-            // discount input section anable
-            const discountIputSection = document.getElementById('discount-input-section');
-            discountIputSection.classList.remove('hidden');
-           
-
-        }        
-        }
+         if(resurvArray.length > 0){
+            const discountBtn=document.getElementById('discount-btn');
+            // discountBtn.disabled = false;
         
-    })  
-}
+        } 
 

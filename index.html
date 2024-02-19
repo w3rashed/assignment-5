@@ -30,7 +30,7 @@
 </head>
 <body>
     <!-- header section start here -->
-    <header class="md:container md:mx-auto pt-12 mb-14 sm:mr-5 font-[raleway]">
+    <header  class="md:container md:mx-auto pt-12 mb-14 sm:mr-5 font-[raleway]">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
@@ -67,7 +67,7 @@
           
     </header>
     <!-- main section  -->
-    <main class=" font-[inter]">
+    <main id="home" class=" font-[inter]">
         <!-- banner section start here -->
         <section class="container mx-auto rounded-[32px] bg-[url(images/banner.png)] bg-no-repeat bg-cover  h-[80vh] flex justify-center items-center  ">
             <div class="text-center w-[730px]">
@@ -315,13 +315,13 @@
                             <div id="discount-section" class="hidden">
                                 <div class="  flex justify-between font-medium text-base">
                                     <h4 >discount Price</h4> 
-                                    <h4>BDT <span id="discount-price">00</span></h4> 
+                                    <h4>BDT <span id="discount-price">0</span></h4> 
                                  </div>
                             </div>
-                            <div  id="discount-input-section" class="hidden" >
+                            <div  id="discount-input-section" class="" >
                                 <div class=" input input-bordere-none rounded-xl w-full h-16 flex justify-between items-center mt-4 mb-6">
                                     <input id="discount-input" class="bg-black" type="text"  placeholder="Have any copupon? " value=""  />
-                                    <button  id="discount-btn" class="  btn rounded-xl  h-12   bg-green-500 text-base font-semibold text-white -mr-2">Apply</button>
+                                    <button disabled id="discount-btn" class="  btn rounded-xl  h-12   bg-green-500 text-base font-semibold text-white -mr-2">Apply</button>
                                 </div>
                             </div>
                             <div class="flex justify-between font-medium text-base">
@@ -367,7 +367,9 @@
                             </p>
                             <form method="dialog">
                                 <!-- if there is a button in form, it will close the modal -->
-                                <button class="btn btn px-16 bg-green-600 rounded-full text-white">Continue</button>
+                                <a href="index.html#home">
+                                    <button class="btn btn px-16 bg-green-600 rounded-full text-white">Continue</button>
+                                </a>
                             </form>
                             </div>
                         </div>

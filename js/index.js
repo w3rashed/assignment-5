@@ -2,6 +2,8 @@ const bokingSeat = 0;
 // const ticketPrice = 550;
 let titleCount = 1;
 let totalTicketPrice = 550;
+const discountPrice = 0;
+const grandTotalAmount = 0;
 
 const seats = document.querySelectorAll('.seat');
 const seatArray = [...seats];
@@ -11,16 +13,25 @@ const resurvArray = [];
 for (let index = 0; index < seatArray.length; index++) {
     const seat = seatArray[index];
     // console.log(element)
-    seat.addEventListener('click',function(event){
+    seat.addEventListener('click',stopclick = function(event){
         resurvArray.push(event.target);
-        console.log(resurvArray);
-        if (resurvArray.length > 3) {
-            alert('this is enough')
-            seat.classList.add('bg-green-500')
+        // console.log(resurvArray);
+        // alart if selected seat up to 4
+        if (resurvArray.length > 4)  {
+            alert('You cant purchess up to 4 ticket')
+            // seat.removeEventListener()
+            
         }
-        
+        else if(resurvArray.length < 5){
+            seat.classList.add('bg-green-400')
+            if(seat.classList.contains('bg-green-400')){
+                // console.log('gggggggggggg')
+                seat.setAttribute("disabled", "");
+                seat.classList.add('disabled:bg-green-500')
+            }
 
-        const seatNumber = seat.innerText;
+            // append child selected seat
+            const seatNumber = seat.innerText;
         const selectedSeats = document.getElementById('selected-seats');
 
         // selected seat add a new div
@@ -45,15 +56,56 @@ for (let index = 0; index < seatArray.length; index++) {
         // avilable seat carculate
         const totalSeat = document.getElementById('total-seat')
         totalSeat.innerText = 40  ;
-        totalSeat.innerText = parseInt(totalSeat.innerText) - parseInt(seatCount.innerText);
-        console.log(seatCount.innerText)
+        totalSeat.innerText = parseFloat(totalSeat.innerText) - parseFloat(seatCount.innerText);
+        // console.log(seatCount.innerText)
         
-        const totalPrice = document.getElementById('total-price')
-        const totalAmount = parseInt(seatCount.innerText) * 550;
-        totalPrice.innerText = totalAmount
-        
-    })
-    
+        // total price calculate
+        const totalPrice = document.getElementById('total-price');
+        const totalAmount = parseFloat(seatCount.innerText) * 550;
+        totalPrice.innerText = totalAmount;
+        // discount amount calculate
+        const discountPrice = document.getElementById('discount-price');
+        // discountPrice.innerText = 500;
 
-    
+        // grant total amount add
+        const grandTotal = document.getElementById('grant-total');
+        grandTotal.innerText = totalAmount - parseFloat(discountPrice.innerText);
+        // discount value access and calculate
+        document.getElementById('discount-btn').addEventListener('click',function(){
+            const discountInput = document.getElementById('discount-input').value;
+            const discountSection = document.getElementById('discount-section')
+            if(discountInput ==='NEW15'){
+               discountPrice.innerText = totalAmount * .15;
+               discountSection.classList.remove('hidden');
+            }
+            else if(discountInput ==='Couple 20'){
+               discountPrice.innerText = totalAmount * .20;
+            }
+            // else(resurvArray.length)
+        
+        })
+
+        
+        const nextBtn = document.getElementById('next-btn');
+        nextBtn.addEventListener('click',function(){
+            if(resurvArray.length === 0){
+                alert('Please selecet minimum one seat')
+                
+            }
+            else{
+               nextBtn.onclick = my_modal_5.showModal();
+            }
+        })
+
+        if(resurvArray.length > 0){
+            // discount input section anable
+            const discountIputSection = document.getElementById('discount-input-section');
+            discountIputSection.classList.remove('hidden');
+           
+
+        }        
+        }
+        
+    })  
 }
+
